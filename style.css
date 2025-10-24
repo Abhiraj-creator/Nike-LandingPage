@@ -216,5 +216,6 @@ main .hero .right .center .btns :nth-child(2) {
   }
   main .hero .right .center {
     left: 8%;
+    top:25%;
   }
 }/*# sourceMappingURL=style.css.map */
