@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    nav {
+        height: 5vw;
+        width: 100%;
+        background-color:transparent;
+        position: absolute;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.3rem;
+        i{
+            display: none;
+        }
+        svg{
+            color: black;
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            h4{
+                text-transform: capitalize;
+                font-weight: 500;
+            }
+            button{
+                padding: .5rem 1.2rem;
+                border-radius: 1.2rem;
+                border: none;
+                outline: none;
+                background-color: #c44942;
+                color: white;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .hero {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .left {
+            width: 40%;
+            height: 100%;
+            background-color: #c44942;
+            position: relative;
+            color: white;
+
+            .text {
+                width: 85%;
+
+                position: absolute;
+                top: 20%;
+                left: 10%;
+
+                h1 {
+                   font-size: clamp(1.3rem, 4vw, 2.5rem);
+                    display: flex;
+                    gap: .7rem;
+
+                    span {
+                        font-weight: 200;
+                        opacity: .7;
+                    }
+                }
+
+                h4 {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    opacity: .85;
+                }
+
+                p {
+                    width: 95%;
+                    opacity: .9;
+                    margin-top: 1rem;
+                    line-height: 1.5;
+                    margin-bottom: 1rem;
+                    font-size: .9rem;
+                }
+
+                button {
+                    padding: .6rem 1.2rem;
+                    border-radius: .3rem;
+                    border: none;
+                    color: #c44942;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+
+            .bottom {
+                position: absolute;
+                left: 0;
+                bottom: 2%;
+                width: 90%;
+                background-color: white;
+                padding: 1rem;
+                color: black;
+
+                h3 {
+                    color: #c44942;
+                    text-transform: uppercase;
+
+                }
+
+                p {
+                    opacity: .8;
+                }
+            }
+        }
+
+        .right {
+            width: 60%;
+            height: 100%;
+            position: relative;
+            // background-color: beige;
+
+           #shoe-img {
+    height: clamp(40%, 40vw, 40%);
+    position: absolute;
+    top: clamp(20%, 30%, 35%);
+    left: clamp(-5%, -2%, 0%);
+    transform: translate(-50%, -50%) rotate(-30deg);
+}
+
+
+
+
+            .center {
+                position: absolute;
+                left: 30%;
+                top: 20%;
+
+                h1 {
+                    font-size: clamp(1.3rem, 4vw, 2.5rem);
+                    display: flex;
+                    gap: .7rem;
+                    color: #c44942;
+                    font-weight: 400;
+
+                    span {
+                        font-weight: 700;
+                        color: black;
+                    }
+                }
+
+                h2 {
+                    font-size: clamp(.6rem,2vw,1.3rem);
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    width: 90%;
+                    margin-bottom: 1rem;
+                }
+
+                .btns {
+                    display: flex;
+                    gap: 1rem;
+
+                    :first-child {
+                        background-color: transparent;
+                        border: 2px solid black;
+                        padding: .6rem 1.2rem;
+                        border-radius: .5rem;
+                        font-weight: 600;
+                    }
+
+                    :nth-child(2) {
+                        background-color: #c44942;
+                        border: none;
+                        padding: .6rem 1.2rem;
+                        border-radius: 1.5rem;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media(max-width:550px){
+    main{
+        // overflow: visible;
+        nav{
+            // width: 100%;
+            // height: 10%;
+            padding: 1.5rem 2rem;
+            i{
+                display: initial;
+                font-size: 1.5rem;
+                font-weight: 400;
+            }
+            .links{
+                display: none;
+            }
+        }
+        .hero{
+            // height: 100%;
+            // width: 100%;
+            flex-direction: column;
+            .left{
+                width: 100%;
+                height: 40%;
+                .text{
+                    h1{
+                        font-size: 2.2rem;
+                    }
+                    p{
+                      display: none;
+                    }
+                    button{
+                        padding: 1rem 2rem;
+                        margin-top: 2rem;
+                    }
+                    
+                }
+                .bottom{
+                        display: none;
+                    }
+            }
+            .right{
+                width: 100%;
+                height: 60%;
+                #shoe-img {
+  position: absolute;
+  top: clamp(-15%, -10%, -5%);
+  left: clamp(45%, 55%, 60%);
+  height: clamp(18vh, 21vh, 28vh);
+}
+
+                .center{
+                    left: 8%;
+                }
+            }
+        }
+    }
+}
